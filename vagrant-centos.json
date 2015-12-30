@@ -4,7 +4,6 @@
       "iso_url": "",
       "iso_checksum": "",
       "iso_checksum_type": "",
-      "guest_additions_path": "",
       "redhat_release": "6.7"
     },
 
@@ -20,7 +19,6 @@
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_checksum_type": "{{user `iso_checksum_type`}}",
-      "guest_additions_path": "{{user `guest_additions_path`}}",
 
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant.ks<enter><wait>"
@@ -60,7 +58,7 @@
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
             "scripts/cleanup.sh",
-            "scripts/puppet.sh"
+            "scripts/salt.sh"
           ]
         }
       }
