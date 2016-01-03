@@ -30,7 +30,7 @@ builders:
     virtualbox_version_file: .vbox_version
 
 post-processors:
-  - output: vagrant-centos-"{{ user `redhat_release`}}".box
+  - output: "vagrant-centos-{{ user `redhat_release`}}.box"
     compression_level: 6
     type: vagrant
 
