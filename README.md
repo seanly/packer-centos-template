@@ -49,3 +49,8 @@ Running Packer
 --------------
 
 `$ packer build -var-file=vars-example.json vagrant-centos.json` 
+
+Usage build.py
+-------------
+
+`$ ./build.py -v centos7.2.yaml centos-build.yaml`
