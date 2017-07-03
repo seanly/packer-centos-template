@@ -3,3 +3,5 @@ packer_cache
 .vagrant
 Vagrantfile
 *.json
+.env
+builds
