@@ -8,7 +8,7 @@ builders:
   - type: virtualbox-iso
     vm_name: centos-vm
     boot_wait: 10s
-    disk_size: 10000
+    disk_size: 20480
     guest_os_type: RedHat_64
     http_directory: http
     iso_url: "{{ user `iso_url` }}"
@@ -17,7 +17,7 @@ builders:
     boot_command:
       - <tab> text ks=http://"{{ .HTTPIP }}":"{{ .HTTPPort }}"/vagrant.ks<enter><wait>
     shutdown_command: echo 'vagrant'|sudo -S /sbin/halt -h -p
-    shutdown_timeout: 10s
+    shutdown_timeout: 1m
     ssh_username: vagrant
     ssh_password: vagrant
     ssh_port: 22
@@ -25,7 +25,7 @@ builders:
     ssh_wait_timeout: 60m
     output_directory: builds
     vboxmanage:
-      - [ modifyvm, "{{ .Name }}", --memory, 640 ]
+      - [ modifyvm, "{{ .Name }}", --memory, 1024 ]
       - [ modifyvm, "{{ .Name }}", --cpus, 2 ]
     virtualbox_version_file: .vbox_version
 
@@ -44,5 +44,3 @@ provisioners:
           - scripts/vagrant.sh
           - scripts/virtualbox.sh
           - scripts/cleanup.sh
-          - scripts/salt.sh
-

@@ -29,7 +29,6 @@ reboot
 
 %packages --nobase
 @Core
-@server-policy
 openssh-clients
 openssh-server
 %end
