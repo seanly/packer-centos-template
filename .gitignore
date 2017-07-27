@@ -2,7 +2,6 @@ packer_cache
 *.box
 .vagrant
 Vagrantfile
-*.json
 .env
 builds
 iso
