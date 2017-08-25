@@ -1,6 +1,6 @@
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 
-rm -rf VBoxGuestAdditions.iso
+rm -rf /tmp/*
+yum -y clean all
 
-sync

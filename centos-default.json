@@ -13,8 +13,8 @@
             "iso_checksum_type": "{{ user `iso_checksum_type` }}",
             "iso_url": "{{ user `iso_url` }}",
             "output_directory": "builds",
-            "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
-            "shutdown_timeout": "1m",
+            "shutdown_command": "sudo /sbin/halt -p",
+            "shutdown_timeout": "10m",
             "ssh_password": "vagrant",
             "ssh_port": 22,
             "ssh_username": "vagrant",
@@ -31,7 +31,7 @@
                     "modifyvm",
                     "{{ .Name }}",
                     "--cpus",
-                    2
+                    1
                 ]
             ],
             "virtualbox_version_file": ".vbox_version",
