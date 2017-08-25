@@ -54,7 +54,6 @@
                         "scripts/base.sh",
                         "scripts/vagrant.sh",
                         "scripts/virtualbox.sh",
-                        "scripts/salt-minion.sh",
                         "scripts/cleanup.sh"
                     ]
                 }
